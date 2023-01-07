@@ -1,0 +1,18 @@
+{
+  "name": "benchmark-js-object-addition",
+  "version": "1.0.0",
+  "description": "Benchmark various way of JS object addition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "js",
+    "benchmark",
+    "object",
+    "addition"
+  ],
+  "author": "Artyom Liou",
+  "license": "ISC",
+  "type": "module"
+}
