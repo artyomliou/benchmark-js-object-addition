@@ -1,6 +1,6 @@
 import { performance } from 'node:perf_hooks'
-const keyTransformer = (num) => num
-const sizes = [10, 100, 1000, 10000]
+const keyTransformer = (num) => `foobar${num}`
+const sizes = [10, 100, 1000, 10000, 100000]
 const types = [
   {
     title: 'Object',
@@ -35,7 +35,7 @@ const types = [
   {
     title: 'Entries',
     create() {
-      this.entries = []
+      this.entries = new Array()
     },
     set(k, v) {
       this.entries.push([k, v])
@@ -57,6 +57,8 @@ const result = {
   '1000 toObject()': {},
   '10000': {},
   '10000 toObject()': {},
+  '100000': {},
+  '100000 toObject()': {},
 }
 for (const type of types) {
   for (const size of sizes) {
