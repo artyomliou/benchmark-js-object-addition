@@ -1,5 +1,5 @@
 import { performance } from 'node:perf_hooks'
-const keyTransformer = (num) => `foobar${num}`
+const keyTransformer = (num) => num
 const sizes = [10, 100, 1000, 10000, 100000]
 const types = [
   {
@@ -63,19 +63,19 @@ const result = {
 for (const type of types) {
   for (const size of sizes) {
     // Addition
-    const s1 = performance.now()
+    const additionStart = performance.now()
     type.create()
     for (let i = 0; i < size; i++) {
       type.set(keyTransformer(i), i)
     }
-    const s2 = performance.now()
-    result[`${size}`][type.title] = Math.trunc((s2 - s1) * 1000)
+    const additionEnd = performance.now()
+    result[`${size}`][type.title] = (additionEnd - additionStart).toFixed(2) + 'ms'
 
     // toObject()
-    const s3 = performance.now()
+    const toObjectStart = performance.now()
     type.toObject()
-    const s4 = performance.now()
-    result[`${size} toObject()`][type.title] = Math.trunc((s4 - s3) * 1000)
+    const toObjectEnd = performance.now()
+    result[`${size} toObject()`][type.title] = (toObjectEnd - toObjectStart).toFixed(2) + 'ms'
 
     // Clear
     type.clear()
