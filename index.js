@@ -66,7 +66,7 @@ for (const type of types) {
     const additionStart = performance.now()
     type.create()
     for (let i = 0; i < size; i++) {
-      type.set(keyTransformer(i), i)
+      type.set(keyTransformer(i), `tttteeeesssstttt${i}`)
     }
     const additionEnd = performance.now()
     result[`${size}`][type.title] = (additionEnd - additionStart).toFixed(2) + 'ms'

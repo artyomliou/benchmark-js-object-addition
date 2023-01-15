@@ -44,50 +44,52 @@ node index.js
 
 # Result
 
+Environment = nodejs 14 & R5-5625U
+
 ## number `10000`
 
 |           (index) | Object  |   Map   | Entries |
 | ----------------: | :-----: | :-----: | :-----: |
-|                10 | 0.04ms  | 0.09ms  | 0.28ms  |
-|               100 | 0.03ms  | 0.02ms  | 0.08ms  |
-|              1000 | 0.09ms  | 0.13ms  | 0.14ms  |
-|             10000 | 1.35ms  | 2.12ms  | 1.70ms  |
-|            100000 | 15.09ms | 28.86ms | 28.94ms |
-|     10 toObject() | 0.01ms  | 0.03ms  | 0.06ms  |
-|    100 toObject() | 0.00ms  | 0.01ms  | 0.02ms  |
-|   1000 toObject() | 0.00ms  | 0.11ms  | 0.08ms  |
-|  10000 toObject() | 0.00ms  | 1.13ms  | 0.96ms  |
-| 100000 toObject() | 0.00ms  | 15.61ms | 9.81ms  |
+|                10 | 0.03ms  | 0.08ms  | 0.26ms  |
+|               100 | 0.03ms  | 0.02ms  | 0.03ms  |
+|              1000 | 0.25ms  | 0.13ms  | 0.18ms  |
+|             10000 | 1.49ms  | 1.81ms  | 1.60ms  |
+|            100000 | 18.16ms | 35.44ms | 25.89ms |
+|     10 toObject() | 0.01ms  | 0.02ms  | 0.01ms  |
+|    100 toObject() | 0.00ms  | 0.01ms  | 0.01ms  |
+|   1000 toObject() | 0.00ms  | 0.06ms  | 0.06ms  |
+|  10000 toObject() | 0.00ms  | 0.94ms  | 0.55ms  |
+| 100000 toObject() | 0.00ms  | 14.52ms | 5.99ms  |
 
 ## string `"10000"`
 
 |           (index) | Object  |   Map   | Entries |
 | ----------------: | :-----: | :-----: | :-----: |
-|                10 | 0.07ms  | 0.12ms  | 0.25ms  |
-|               100 | 0.05ms  | 0.03ms  | 0.05ms  |
-|              1000 | 0.46ms  | 0.19ms  | 0.23ms  |
-|             10000 | 2.58ms  | 2.79ms  | 2.56ms  |
-|            100000 | 23.30ms | 34.43ms | 41.63ms |
-|     10 toObject() | 0.01ms  | 0.03ms  | 0.04ms  |
+|                10 | 0.04ms  | 0.12ms  | 0.32ms  |
+|               100 | 0.05ms  | 0.02ms  | 0.03ms  |
+|              1000 | 0.37ms  | 0.13ms  | 0.14ms  |
+|             10000 | 2.82ms  | 2.06ms  | 1.46ms  |
+|            100000 | 29.73ms | 30.37ms | 30.44ms |
+|     10 toObject() | 0.01ms  | 0.03ms  | 0.02ms  |
 |    100 toObject() | 0.00ms  | 0.01ms  | 0.01ms  |
-|   1000 toObject() | 0.00ms  | 0.11ms  | 0.09ms  |
-|  10000 toObject() | 0.00ms  | 1.13ms  | 1.03ms  |
-| 100000 toObject() | 0.00ms  | 15.59ms | 9.54ms  |
+|   1000 toObject() | 0.00ms  | 0.06ms  | 0.07ms  |
+|  10000 toObject() | 0.00ms  | 0.96ms  | 0.59ms  |
+| 100000 toObject() | 0.00ms  | 22.14ms | 7.03ms  |
 
 ## string `"foobar10000"`
 
-|           (index) |  Object  |   Map   | Entries |
-| ----------------: | :------: | :-----: | :-----: |
-|                10 |  0.08ms  | 0.15ms  | 0.19ms  |
-|               100 |  0.11ms  | 0.04ms  | 0.05ms  |
-|              1000 |  0.85ms  | 0.27ms  | 0.25ms  |
-|             10000 |  8.34ms  | 12.66ms | 2.63ms  |
-|            100000 | 121.66ms | 47.10ms | 34.05ms |
-|     10 toObject() |  0.01ms  | 0.04ms  | 0.04ms  |
-|    100 toObject() |  0.00ms  | 0.14ms  | 0.12ms  |
-|   1000 toObject() |  0.00ms  | 4.44ms  | 5.83ms  |
-|  10000 toObject() |  0.00ms  | 10.86ms | 4.59ms  |
-| 100000 toObject() |  0.00ms  | 69.71ms | 68.79ms |
+|           (index) | Object  |   Map   | Entries |
+| ----------------: | :-----: | :-----: | :-----: |
+|                10 | 0.04ms  | 0.09ms  | 0.25ms  |
+|               100 | 0.08ms  | 0.03ms  | 0.03ms  |
+|              1000 | 0.60ms  | 0.20ms  | 0.18ms  |
+|             10000 | 8.16ms  | 5.09ms  | 1.76ms  |
+|            100000 | 84.55ms | 32.37ms | 22.95ms |
+|     10 toObject() | 0.01ms  | 0.03ms  | 0.02ms  |
+|    100 toObject() | 0.00ms  | 0.09ms  | 0.08ms  |
+|   1000 toObject() | 0.00ms  | 2.74ms  | 3.79ms  |
+|  10000 toObject() | 0.00ms  | 2.96ms  | 3.35ms  |
+| 100000 toObject() | 0.00ms  | 60.03ms | 38.63ms |
 
 # Conclusion
 
